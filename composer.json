@@ -1,0 +1,47 @@
+{
+    "name": "nts/query",
+    "description": "Query constants file generator",
+    "type": "backend",
+    "license": "",
+    "keywords": [
+        "",
+        "quer"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Nts\\Query\\": "libraries/"
+        }
+    },
+   "require": {
+       "php": ">=5.6",
+       "composer/installers": "~1.0",
+       "oomphinc/composer-installers-extender": "^1.1",
+       "nts/db": "dev-master",
+       "nts/dhtmlx": "dev-master",
+       "nts/config": "dev-master"
+   },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "gitolite3@development.salland.eu:nts-db"
+        },
+        {
+            "type": "git",
+            "url": "gitolite3@development.salland.eu:nts-dhtmlx"
+        },
+        {
+            "type": "git",
+            "url": "gitolite3@development.salland.eu:nts-config"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra":{
+        "installer-name": "Query",
+        "installer-types": ["backend", "config"],
+        "installer-paths": {
+            "public/programs/{$name}/": ["type:backend"],
+            "config/": ["type:config"]
+        }
+    }
+}
